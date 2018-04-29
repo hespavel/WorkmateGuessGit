@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "654926370103",
+    "firebase_url": "https://workmateguess.firebaseio.com",
+    "project_id": "workmateguess",
+    "storage_bucket": "workmateguess.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:654926370103:android:3d6bf6dd11dc1f73",
+        "android_client_info": {
+          "package_name": "cz.fel.cvut.workmateguessgit"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "654926370103-oa4tt02ebntrqa95sg547t0rfcik05tr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA0VA35znxVOApnZv_tdQaxNYUjCt9MmTI"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
