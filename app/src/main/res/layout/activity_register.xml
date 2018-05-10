@@ -9,38 +9,37 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="29dp"
-        android:layout_marginTop="24dp"
-        android:text="Přihlášení"
+        android:layout_alignStart="@+id/emailTextView"
+        android:layout_marginTop="22dp"
+        android:text="Registrace"
         android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
     <EditText
-        android:id="@+id/editText"
+        android:id="@+id/emailEditText"
         android:layout_width="330dp"
         android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/textView2"
-        android:layout_below="@+id/textView2"
-        android:layout_marginTop="12dp"
+        android:layout_below="@+id/textView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="46dp"
         android:ems="10"
         android:inputType="textPersonName" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/emailTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/textView"
+        android:layout_alignStart="@+id/emailEditText"
         android:layout_below="@+id/textView"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="27dp"
         android:text="E-mail" />
 
     <EditText
-        android:id="@+id/editText3"
+        android:id="@+id/passwordEditText"
         android:layout_width="330dp"
         android:layout_height="wrap_content"
         android:layout_alignStart="@+id/textView3"
-        android:layout_below="@+id/editText"
+        android:layout_below="@+id/emailEditText"
         android:layout_marginTop="39dp"
         android:ems="10"
         android:inputType="textPassword" />
@@ -49,8 +48,8 @@
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/editText"
-        android:layout_below="@+id/editText"
+        android:layout_alignStart="@+id/emailEditText"
+        android:layout_below="@+id/emailEditText"
         android:layout_marginTop="11dp"
         android:text="Heslo" />
 
@@ -58,7 +57,7 @@
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/editText3"
+        android:layout_alignStart="@+id/passwordEditText"
         android:layout_centerVertical="true"
         android:text="Heslo znovu" />
 
@@ -66,13 +65,14 @@
         android:id="@+id/button2"
         android:layout_width="330dp"
         android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/editText2"
-        android:layout_below="@+id/editText2"
-        android:layout_marginTop="19dp"
+        android:layout_alignStart="@+id/passwordAgainEditText"
+        android:layout_below="@+id/passwordAgainEditText"
+        android:layout_marginTop="31dp"
+        android:onClick="onClickRegister"
         android:text="Zaregistrovat se" />
 
     <EditText
-        android:id="@+id/editText2"
+        android:id="@+id/passwordAgainEditText"
         android:layout_width="330dp"
         android:layout_height="wrap_content"
         android:layout_alignStart="@+id/textView4"

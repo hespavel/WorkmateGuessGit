@@ -1,10 +1,8 @@
 package cz.fel.cvut.workmateguessgit;
 
-import android.content.Context;
-import android.content.Intent;
-import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
@@ -13,27 +11,14 @@ import android.widget.Toast;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
-import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
-public class RegisterActivity extends AppCompatActivity {
-
-    private FirebaseAuth firebaseAuth;
-
-    @Override
-    public void onStart() {
-        super.onStart();
-
-        firebaseAuth = FirebaseAuth.getInstance();
-    }
+public class CreateGroupActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_register);
-
-        firebaseAuth = FirebaseAuth.getInstance();
-
+        setContentView(R.layout.activity_create_group);
     }
 
     public void onClickRegister(View view) {
@@ -51,7 +36,7 @@ public class RegisterActivity extends AppCompatActivity {
         String passwordAgain = passwordAgainEditText.getText().toString();
 
 
-        if(!password.equals(passwordAgain)) {
+        /*if(!password.equals(passwordAgain)) {
 
             Toast toast = Toast.makeText(RegisterActivity.this, "Zadaná hesla se neshodují", Toast.LENGTH_LONG);
 
@@ -67,20 +52,20 @@ public class RegisterActivity extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
-                            //FirebaseUser user = firebaseAuth.getCurrentUser();
-
-                            Intent intent = new Intent(RegisterActivity.this, MenuActivity.class);
-
-                            startActivity(intent);
-
+                            // Sign in success, update UI with the signed-in user's information
+                            Log.d("RegisterActivity", "createUserWithEmail:success");
+                            FirebaseUser user = firebaseAuth.getCurrentUser();
+                            //updateUI(user);
                         } else {
                             // If sign in fails, display a message to the user.
-                            Log.d("RegisterActivity", "Uživatelský účet se nepodařilo vytvořit", task.getException());
+                            Log.w("RegisterActivity", "createUserWithEmail:failure", task.getException());
                             Toast.makeText(RegisterActivity.this, "Authentication failed.",
                                     Toast.LENGTH_SHORT).show();
-
+                            //updateUI(null);
                         }
+
+                        // ...
                     }
-                });
+                });*/
     }
 }

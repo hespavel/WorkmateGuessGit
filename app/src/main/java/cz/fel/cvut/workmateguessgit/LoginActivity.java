@@ -13,7 +13,7 @@ public class LoginActivity extends AppCompatActivity {
         setContentView(R.layout.activity_login);
     }
 
-    public void onClick(View view) {
+    public void onClickRegister(View view) {
         Intent intent = new Intent(this, RegisterActivity.class);
 
         startActivity(intent);
